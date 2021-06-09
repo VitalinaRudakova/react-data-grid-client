@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
 import ModalForm from "./Components/ModalForm/ModalForm";
 import DataTable from "./Components/DataTable/DataTable";
-import FormEdit from "./Components/FormEdit/FormEdit";
+// import FormEdit from "./Components/FormEdit/FormEdit";
 
 export default class App extends Component {
   state = {
@@ -57,7 +57,6 @@ export default class App extends Component {
           updateState={this.updateState}
           deleteItemFromState={this.deleteItemFromState}
         />
-        <FormEdit />
       </Container>
     );
   }
