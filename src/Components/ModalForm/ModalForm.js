@@ -29,7 +29,7 @@ export default class ModalForm extends Component {
       <Button
         color="primary"
         onClick={this.toggle}
-        style={{ float: 'left', marginRight: '10px' }}
+        style={{ float: 'right', marginRight: '10px' }}
       >
         {label}
       </Button>

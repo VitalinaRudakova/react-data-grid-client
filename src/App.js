@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import Container from "@material-ui/core/Container";
-import ModalForm from "./Components/ModalForm/ModalForm";
-import DataTable from "./Components/DataTable/DataTable";
-// import FormEdit from "./Components/FormEdit/FormEdit";
+import React, { Component } from 'react';
+import Container from '@material-ui/core/Container';
+import ModalForm from './Components/ModalForm/ModalForm';
+import DataTable from './Components/DataTable/DataTable';
 
 export default class App extends Component {
   state = {
@@ -10,7 +9,7 @@ export default class App extends Component {
   };
 
   getItems() {
-    fetch("http://172.19.52.75:9000/")
+    fetch('http://172.19.52.75:9000/')
       .then((res) => res.json())
       .then((items) => this.setState({ items }))
       .catch((e) => console.log(e));
@@ -46,7 +45,7 @@ export default class App extends Component {
   render() {
     return (
       <Container className="App">
-        <h1 style={{ margin: "20px 0" }}>React Data Grid</h1>
+        <h1 style={{ margin: '20px 0' }}>React Data Grid</h1>
         <ModalForm
           buttonLabel="Add Item"
           addItemToState={this.addItemToState}

@@ -30,14 +30,10 @@ class FormAdd extends React.Component {
         value: this.state.value,
       }),
     })
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((item) => {
-        if (Array.isArray(item)) {
-          this.props.addItemToState(item[0]);
-          this.props.toggle();
-        } else {
-          console.log('somethings was wrong in adding form');
-        }
+        this.props.addItemToState(item);
+        this.props.toggle();
       })
       .catch((err) => console.log(err));
   };
@@ -55,7 +51,6 @@ class FormAdd extends React.Component {
         <FormControl>
           <InputLabel htmlFor="name"></InputLabel>
           <Input
-            placeholder="name"
             type="text"
             name="name"
             id="name"
